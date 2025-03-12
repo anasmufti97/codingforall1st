@@ -45,6 +45,7 @@ INSTALLED_APPS = [
 ]
 
 EXTERNAL_APPS = [
+    
     'home',
 ]
 
@@ -142,8 +143,10 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+AUTH_USER_MODEL = "home.User"
+
 SIMPLE_JWT = {
-    
+
     "ACCESS_TOKEN_LIFETIME": timedelta(minutes=20),
     "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
     "ROTATE_REFRESH_TOKENS": False,
