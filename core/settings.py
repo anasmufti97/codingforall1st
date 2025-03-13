@@ -96,12 +96,11 @@ DATABASES = {
 }
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
-  
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
-    'DEFAULT_RENDERER_CLASSES': (
-        'rest_framework.renderers.JSONRenderer',  # Ensures API responses are in JSON
-    )
+    # 'DEFAULT_RENDERER_CLASSES': (
+        # 'rest_framework.renderers.JSONRenderer',  # Ensures API responses are in JSON
+    # )
 }
 
 # Password validation

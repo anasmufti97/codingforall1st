@@ -19,6 +19,6 @@ from rest_framework import status
 
 
 class UserRegistrationView(APIView):
-    def get(self, request, format=None):
-        return Response("Hello from get method")
+    def post(self, request, format=None):
+        return Response("Post Method")
 
