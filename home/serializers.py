@@ -13,7 +13,6 @@ class UserRegistrationSerializer(serializers.ModelSerializer):
             'password': {'write_only': True},
             'password2': {'write_only': True},
         }
-
     def validate(self, attrs):
         password = attrs.get('password')
         password2 = attrs.pop('password2')
