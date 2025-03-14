@@ -19,7 +19,6 @@ class UserRegistrationSerializer(serializers.ModelSerializer):
         if password != password2:
             raise serializers.ValidationError({'password': 'Passwords must match.'})    
         return super().validate(attrs)    
-
     def create(self, validated_data):
         user = User.objects.create_user(
             email=validated_data['email'],
