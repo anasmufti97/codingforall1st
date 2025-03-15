@@ -11,4 +11,5 @@ urlpatterns = [
 
     path('admin/', admin.site.urls),
     path('api/user/', include('home.urls')),
+    
 ]
