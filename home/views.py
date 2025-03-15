@@ -1,23 +1,16 @@
 from django.shortcuts import render
-# from django.http import HttpResponse
-# def home(request):
-#     return HttpResponse("Hello, Django! from HOme")
-
-
-
-# def htmlPage(request):
-#     return render(request, 'E:\Django\djangoCourse\core\home\Templates\index.html')
-
-
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import status
 from django.contrib.auth import authenticate
 from home.serializers import UserLoginSerializer, UserRegistrationSerializer
 
+from home.renderers import UserRenderer
 
 
 class UserRegistrationView(APIView):
+
+    renderer_classes = (UserRenderer,)
     def post(self, request, format=None):
         serializer = UserRegistrationSerializer(data=request.data)
         if serializer.is_valid(raise_exception=True):
