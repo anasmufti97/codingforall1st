@@ -9,6 +9,6 @@ urlpatterns = [
 # path('', home, name='home'),
 # path('htmlPage/', htmlPage, name='htmlPage'),
 
-    # path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls),
     path('api/user/', include('home.urls')),
 ]
